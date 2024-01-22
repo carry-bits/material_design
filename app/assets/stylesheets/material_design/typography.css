@@ -1,0 +1,24 @@
+.typography__title--small {
+  /* Typography */
+  color: var(--M3-sys-light-on-surface-variant, #49454F);
+  
+  /* M3/title/small */
+  /* font-family: Roboto; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.1px;
+}
+
+.typography__label--large {
+  color: var(--M3-sys-light-on-secondary-container, #1D192B);
+
+  /* M3/label/large - prominent */
+  /* font-family: Roboto; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.1px;
+}
