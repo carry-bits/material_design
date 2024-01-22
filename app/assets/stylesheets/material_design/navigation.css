@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: flex-start;
   border-radius: 16px;
-  background: var(--M3-sys-light-surface-container-low, #F7F2FA);
+  background: var(--md-sys-light-surface-container-low);
 }
 
 .navigation-drawer__headline {
@@ -37,7 +37,7 @@
 }
 
 .navigation-drawer__nav_item:hover {
-  background: var(--M3-state-layers-light-on-surface-opacity, #1D1B2014);
+  background: var(-md-state-layers-light-on-surface-opacity, #1D1B2014);
 }
 
 .navigation-drawer__state-layer {

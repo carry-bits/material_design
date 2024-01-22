@@ -1,6 +1,6 @@
 .typography__title--small {
   /* Typography */
-  color: var(--M3-sys-light-on-surface-variant, #49454F);
+  color: var(--md-sys-light-on-surface-variant);
   
   /* M3/title/small */
   /* font-family: Roboto; */
@@ -12,7 +12,7 @@
 }
 
 .typography__label--large {
-  color: var(--M3-sys-light-on-secondary-container, #1D192B);
+  color: var(--md-sys-light-on-secondary-container);
 
   /* M3/label/large - prominent */
   /* font-family: Roboto; */
