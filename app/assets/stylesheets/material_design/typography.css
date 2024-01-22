@@ -1,6 +1,11 @@
 .typography__title--small {
   /* Typography */
-  color: var(--md-sys-light-on-surface-variant);
+  @media (prefers-color-scheme: light) {
+    color: var(--md-sys-light-on-surface-variant);
+  }
+  @media (prefers-color-scheme: dark) {
+    color: var(--md-sys-dark-on-surface-variant);
+  }
   
   /* M3/title/small */
   /* font-family: Roboto; */
@@ -12,7 +17,12 @@
 }
 
 .typography__label--large {
-  color: var(--md-sys-light-on-secondary-container);
+  @media (prefers-color-scheme: light) {
+    color: var(--md-sys-light-on-secondary-container);
+  }
+  @media (prefers-color-scheme: dark) {
+    color: var(--md-sys-dark-on-secondary-container);
+  }
 
   /* M3/label/large - prominent */
   /* font-family: Roboto; */
