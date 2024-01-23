@@ -3,10 +3,10 @@
   <% locals[:sections].each do |section| %>
     <%= render "material_design/navigation/navigation_drawer/section_header", locals: { section_header: section[:header] } %>
     <% section[:nav_items].each do |nav_item| %>
-      <%= link_to nav_item[:href], class: "navigation-drawer__nav_item" do %>
+      <%= link_to nav_item[:href], class: "navigation-drawer__nav_item#{current_page?(nav_item[:href]) ? ' active' : ''}" do %>
         <div class="navigation-drawer__state-layer">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z" fill="#1D192B"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z" fill="currentcolor  "/>
           </svg>
           <div style="flex: 1 0 0;">
             <%= render "material_design/typography/label_large", locals: { label: nav_item[:label] } %>

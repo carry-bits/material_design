@@ -12,6 +12,9 @@
   @media (prefers-color-scheme: dark) {
     background: var(--md-sys-dark-surface-container-low);
   }
+  @media (max-width: 840px) {
+    display: none;
+  }
 }
 
 .navigation-drawer__headline {
@@ -43,7 +46,21 @@
 }
 
 .navigation-drawer__nav_item:hover {
-  background: var(-md-state-layers-light-on-surface-opacity, #1D1B2014);
+  @media (prefers-color-scheme: light) {
+    background: var(--md-sys-light-secondary-container);
+  }
+  @media (prefers-color-scheme: dark) {
+    background: var(--md-sys-dark-secondary-container);
+  }
+}
+
+.navigation-drawer__nav_item.active {
+  @media (prefers-color-scheme: light) {
+    background: var(--md-sys-light-secondary-container);
+  }
+  @media (prefers-color-scheme: dark) {
+    background: var(--md-sys-dark-secondary-container);
+  }
 }
 
 .navigation-drawer__state-layer {
