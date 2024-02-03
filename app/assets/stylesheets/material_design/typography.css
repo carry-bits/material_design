@@ -32,3 +32,25 @@
   line-height: 20px; /* 142.857% */
   letter-spacing: 0.1px;
 }
+
+.typography__body-large {
+  font-size: 16px;
+  line-height: 24px;
+  @media (prefers-color-scheme: light) {
+    color: var(--md-sys-light-on-surface);
+  }
+  @media (prefers-color-scheme: dark) {
+    color: var(--md-sys-dark-on-surface);
+  }
+}
+
+.typography__body-medium {
+  font-size: 14px;
+  line-height: 20px;
+  @media (prefers-color-scheme: light) {
+    color: var(--md-sys-light-on-surface-variant);
+  }
+  @media (prefers-color-scheme: dark) {
+    color: var(--md-sys-dark-on-surface-variant);
+  }
+}
