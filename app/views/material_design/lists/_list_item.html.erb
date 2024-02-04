@@ -1,6 +1,8 @@
-<div class="list-item list-item__one-line">
-  <div class="list-item--content">
-    <%= render "material_design/typography/body_large", locals: { body: locals[:headline] } %>
-    <%= render "material_design/typography/body_medium", locals: { body: locals[:supporting_text] } %>
+<%= link_to locals[:path], target: "_top" do %>
+  <div class="list-item list-item__one-line">
+    <div class="list-item--content">
+      <%= render "material_design/typography/body_large", locals: { body: locals[:headline] } %>
+      <%= render "material_design/typography/body_medium", locals: { body: locals[:supporting_text] } %>
+    </div>
   </div>
-</div>
+<% end %>
