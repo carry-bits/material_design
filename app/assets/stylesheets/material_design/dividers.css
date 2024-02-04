@@ -1,0 +1,14 @@
+.horizontal-divider {
+  width: 100%;
+  margin-top: 0;
+  @media (prefers-color-scheme: light) {
+    border: 1px solid rgb(var(--md-sys-light-outline-variant));
+  }
+  @media (prefers-color-scheme: dark) {
+    border: 1px solid rgb(var(--md-sys-dark-outline-variant));
+  }
+}
+
+.divider__inset {
+  margin: 0 16px;
+}

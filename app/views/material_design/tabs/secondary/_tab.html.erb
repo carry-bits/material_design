@@ -1,0 +1,3 @@
+<%= link_to locals[:path], data: { controller: locals[:controller] }, class: class_names('secondary-tabs--tab', active: request.fullpath.start_with?(locals[:path])) do %>
+  <%= render "material_design/typography/title_small", locals: { title: locals[:label] } %>
+<% end %>

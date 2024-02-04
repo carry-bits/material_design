@@ -1,0 +1,8 @@
+<div class="top-bar--container">
+  <% if locals[:back_path] %>
+    <%= link_to locals[:back_path] do %>
+      <%= render "material_design/icons/icon", locals: { icon: "arrow_back", size: "40" } %>
+    <% end %>
+  <% end %>
+  <%= render "material_design/typography/title_large", locals: { title: locals[:headline], center: locals[:center] } %>
+</div>

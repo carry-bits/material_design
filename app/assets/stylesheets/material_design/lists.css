@@ -5,19 +5,20 @@
   gap: 16px;
   padding: 8px 16px;
   @media (prefers-color-scheme: light) {
-    background: var(--md-sys-light-surface-container);
+    background: rgb(var(--md-sys-light-surface-container));
   }
   @media (prefers-color-scheme: dark) {
-    background: var(--md-sys-dark-surface-container);
+    background: rgb(var(--md-sys-dark-surface-container));
   }
 }
 
 .list-item:hover {
+  cursor: pointer;
   @media (prefers-color-scheme: light) {
-    background: var(--md-sys-light-state-hover-state-layer-opacity);
+    background: rgb(var(--md-sys-light-on-surface) / var(--md-sys-light-state-hover-state-layer-opacity));
   }
   @media (prefers-color-scheme: dark) {
-    background: var(--md-sys-dark-state-hover-state-layer-opacity);
+    background: rgb(var(--md-sys-dark-on-surface) / var(--md-sys-light-state-hover-state-layer-opacity));
   }
 }
 

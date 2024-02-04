@@ -1,0 +1,8 @@
+svg {
+  @media (prefers-color-scheme: light) {
+    color: rgb(var(--md-sys-light-on-surface));
+  }
+  @media (prefers-color-scheme: dark) {
+    color: rgb(var(--md-sys-dark-on-surface));
+  }
+}

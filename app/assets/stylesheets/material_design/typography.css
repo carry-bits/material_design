@@ -1,46 +1,61 @@
-.typography__title--small {
-  /* Typography */
-  @media (prefers-color-scheme: light) {
-    color: var(--md-sys-light-on-surface-variant);
-  }
-  @media (prefers-color-scheme: dark) {
-    color: var(--md-sys-dark-on-surface-variant);
-  }
-  
-  /* M3/title/small */
-  /* font-family: Roboto; */
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px; /* 142.857% */
-  letter-spacing: 0.1px;
+.typography__headline-medium {
+  font-size: 28px;
+  line-height: 36px;
 }
 
-.typography__label--large {
+.typography__headline-small {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.typography--title-large {
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.typography__title-medium {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing:0.15px;
+}
+
+.typography__title-small {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+
   @media (prefers-color-scheme: light) {
-    color: var(--md-sys-light-on-secondary-container);
+    color: rgb(var(--md-sys-light-on-surface-variant));
   }
   @media (prefers-color-scheme: dark) {
-    color: var(--md-sys-dark-on-secondary-container);
+    color: rgb(var(--md-sys-dark-on-surface-variant));
   }
+}
 
-  /* M3/label/large - prominent */
-  /* font-family: Roboto; */
+.typography__label-large {
   font-size: 14px;
-  font-style: normal;
   font-weight: 600;
-  line-height: 20px; /* 142.857% */
+  line-height: 20px;
   letter-spacing: 0.1px;
+
+  @media (prefers-color-scheme: light) {
+    color: rgb(var(--md-sys-light-on-secondary-container));
+  }
+  @media (prefers-color-scheme: dark) {
+    color: rgb(var(--md-sys-dark-on-secondary-container));
+  }
 }
 
 .typography__body-large {
   font-size: 16px;
   line-height: 24px;
   @media (prefers-color-scheme: light) {
-    color: var(--md-sys-light-on-surface);
+    color: rgb(var(--md-sys-light-on-surface));
   }
   @media (prefers-color-scheme: dark) {
-    color: var(--md-sys-dark-on-surface);
+    color: rgb(var(--md-sys-dark-on-surface));
   }
 }
 
@@ -48,9 +63,9 @@
   font-size: 14px;
   line-height: 20px;
   @media (prefers-color-scheme: light) {
-    color: var(--md-sys-light-on-surface-variant);
+    color: rgb(var(--md-sys-light-on-surface-variant));
   }
   @media (prefers-color-scheme: dark) {
-    color: var(--md-sys-dark-on-surface-variant);
+    color: rgb(var(--md-sys-dark-on-surface-variant));
   }
 }
