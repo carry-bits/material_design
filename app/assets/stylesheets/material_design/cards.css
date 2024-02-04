@@ -1,0 +1,14 @@
+.card--container {
+  border-radius: 12px;
+}
+
+.card--container__outlined {
+  @media (prefers-color-scheme: light) {
+    background: rgb(var(--md-sys-light-surface-container));
+    border: 1px solid rgb(var(--md-sys-light-outline-variant));
+  }
+  @media (prefers-color-scheme: dark) {
+    background: rgb(var(--md-sys-dark-surface-container));
+    border: 1px solid rgb(var(--md-sys-dark-outline-variant));
+  }
+}
