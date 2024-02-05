@@ -1,6 +1,6 @@
 <div class="secondary-tabs--container">
   <% locals[:tabs].each do |tab| %>
-    <%= render "material_design/tabs/secondary/tab", locals: { label: tab[:label], path: tab[:path], controller: tab[:controller] } %>
+    <%= render "material_design/tabs/secondary/tab", locals: { label: tab[:label], path: tab[:path] } %>
   <% end %>
 </div>
 <%= render "material_design/dividers/horizontal", locals: { inset: false } %>
