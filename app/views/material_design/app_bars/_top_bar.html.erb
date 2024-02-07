@@ -1,4 +1,7 @@
 <div class="top-bar--container">
+  <div class="top-bar--menu-button" data-action="click->navigation#toggle">
+    <%= render "material_design/buttons/icon_button", locals: { icon: "menu" } %>
+  </div>
   <% if locals[:back_path] %>
     <%= link_to locals[:back_path] do %>
       <%= render "material_design/icons/icon", locals: { icon: "arrow_back", size: "40" } %>

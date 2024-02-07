@@ -25,3 +25,10 @@
     color: rgb(var(--md-sys-dark-on-surface));
   }
 }
+
+.top-bar--menu-button {
+  display: none;
+  @media (max-width: 840px) {
+    display: block;
+  }
+}

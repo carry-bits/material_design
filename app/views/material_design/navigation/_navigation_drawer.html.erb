@@ -1,4 +1,4 @@
-<div class="navigation-drawer">
+<div class="navigation-drawer" data-navigation-target="navigationDrawer">
   <%= render "material_design/navigation/navigation_drawer/headline", locals: { headline: locals[:headline] } %>
   <% locals[:sections].each do |section| %>
     <%= render "material_design/navigation/navigation_drawer/section_header", locals: { section_header: section[:header] } %>
