@@ -1,0 +1,11 @@
+<% nav_item = locals[:nav_item]%>
+
+<%= link_to nav_item[:href], data: { "turbo-method": nav_item[:data_turbo_method] }, class: class_names("navigation-drawer__nav_item", { active: request.fullpath.start_with?(nav_item[:href]) }) do %>
+  <div class="navigation-drawer__state-layer">
+    <%= render "material_design/icons/icon", locals: { size: 24, icon: nav_item[:icon] } %>
+    <div style="flex: 1 0 0;">
+      <%= render "material_design/typography/label_large", locals: { label: nav_item[:label] } %>
+    </div>
+    <%= render "material_design/typography/label_large", locals: { label: nav_item[:badge_label] } %>
+  </div>
+<% end %>

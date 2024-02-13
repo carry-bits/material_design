@@ -3,7 +3,7 @@ require_relative "lib/material_design/version"
 Gem::Specification.new do |spec|
   spec.name        = "material_design"
   spec.version     = MaterialDesign::VERSION
-  spec.authors     = ["Eduardo Yutaka Nakanishi", "Mariana Negrão Trancoso"]
+  spec.authors     = ["Eduardo Yutaka Nakanishi", "Fabiana Ramos", "Mariana Negrão Trancoso"]
   spec.email       = ["eduardo.nakanishi@gmail.com"]
   spec.homepage    = "https://rubygems.org/gems/material_design"
   spec.summary     = "Material Design"
