@@ -25,7 +25,7 @@ $ gem install material_design
 Contribution directions go here.
 
 ## Deploy
-- Sign up in https://rubygems.org/
+- Sign up in [RubyGem](https://rubygems.org/)
 - gem build material_design.gemspec
 - gem push material_design-x-x-x.gem
 
