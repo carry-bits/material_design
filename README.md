@@ -24,5 +24,10 @@ $ gem install material_design
 ## Contributing
 Contribution directions go here.
 
+## Deploy
+- Sign up in https://rubygems.org/
+- gem build material_design.gemspec
+- gem push material_design-x-x-x.gem
+
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
