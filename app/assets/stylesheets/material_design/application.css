@@ -2,6 +2,8 @@
   /* color-scheme: light dark; */
   --md-sys-light-state-hover-state-layer-opacity: 0.08;
   --md-sys-dark-state-hover-state-layer-opacity: 0.08;
+  --md-sys-light-state-press-state-layer-opacity: 0.1;
+  --md-sys-dark-state-press-state-layer-opacity: 0.1;
 
   /* Light scheme */
   --md-sys-light-primary: 101 85 143;
