@@ -8,6 +8,7 @@
     --md-sys-outlined-pressed-layer-state: rgb(var(--md-sys-light-primary) / var(--md-sys-light-state-pressed-state-layer-opacity));
   }
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --md-sys-tonal-hover-layer-state: rgb(var(--md-sys-dark-on-secondary-container) / var(--md-sys-dark-state-hover-state-layer-opacity));
@@ -179,6 +180,7 @@
 .common-button__tonal:not(:disabled) .layer-state__tonal:hover {
   background: var(--md-sys-tonal-hover-layer-state) radial-gradient(circle, transparent 1%, var(--md-sys-tonal-hover-layer-state) 1%) center/15000%;
 }
+
 .common-button__tonal:not(:disabled) .layer-state__tonal:active {
   background-color: var(--md-sys-tonal-pressed-layer-state);
   background-size: 100%;
