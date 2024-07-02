@@ -1,7 +1,11 @@
 :root {
   /* color-scheme: light dark; */
-  --md-sys-light-state-hover-state-layer-opacity: 0.08;
-  --md-sys-dark-state-hover-state-layer-opacity: 0.08;
+  --md-sys-light-state-hover-state-layer-opacity: 0.12;
+  --md-sys-dark-state-hover-state-layer-opacity: 0.12;
+  --md-sys-light-state-pressed-state-layer-opacity: 0.24;
+  --md-sys-dark-state-pressed-state-layer-opacity: 0.24;
+  --md-sys-light-state-disabled-state-layer-opacity: 0.38;
+  --md-sys-dark-state-disabled-state-layer-opacity: 0.38;
 
   /* Light scheme */
   --md-sys-light-primary: 101 85 143;
