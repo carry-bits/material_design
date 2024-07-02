@@ -1,6 +1,22 @@
-.icon-button--container {
-  height: 40px;
-  width: 40px;
+@media (prefers-color-scheme: light) {
+  :root {
+    --md-sys-tonal-hover-layer-state: rgb(var(--md-sys-light-on-secondary-container) / var(--md-sys-light-state-hover-state-layer-opacity));
+    --md-sys-tonal-pressed-layer-state: rgb(var(--md-sys-light-on-secondary-container) / var(--md-sys-light-state-pressed-state-layer-opacity));
+    --md-sys-filled-hover-layer-state: rgb(var(--md-sys-light-on-primary) / var(--md-sys-light-state-hover-state-layer-opacity));
+    --md-sys-filled-pressed-layer-state: rgb(var(--md-sys-light-on-primary) / var(--md-sys-light-state-pressed-state-layer-opacity));
+    --md-sys-outlined-hover-layer-state: rgb(var(--md-sys-light-primary) / var(--md-sys-light-state-hover-state-layer-opacity));
+    --md-sys-outlined-pressed-layer-state: rgb(var(--md-sys-light-primary) / var(--md-sys-light-state-pressed-state-layer-opacity));
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --md-sys-tonal-hover-layer-state: rgb(var(--md-sys-dark-on-secondary-container) / var(--md-sys-dark-state-hover-state-layer-opacity));
+    --md-sys-tonal-pressed-layer-state: rgb(var(--md-sys-dark-on-secondary-container) / var(--md-sys-dark-state-pressed-state-layer-opacity));
+    --md-sys-filled-hover-layer-state: rgb(var(--md-sys-dark-on-primary) / var(--md-sys-dark-state-hover-state-layer-opacity));
+    --md-sys-filled-pressed-layer-state: rgb(var(--md-sys-dark-on-primary) / var(--md-sys-dark-state-pressed-state-layer-opacity));
+    --md-sys-outlined-hover-layer-state: rgb(var(--md-sys-dark-primary) / var(--md-sys-dark-state-hover-state-layer-opacity));
+    --md-sys-outlined-pressed-layer-state: rgb(var(--md-sys-dark-primary) / var(--md-sys-dark-state-pressed-state-layer-opacity));
+  }
 }
 
 .common-button--container {
@@ -15,18 +31,31 @@
   justify-content: center;
   align-items: center;
   margin: 0 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.common-button--icon {
+  height: 18px;
+  height: 18px;
+}
+
+.icon-button--container {
+  height: 40px;
+  width: 40px;
 }
 
 .layer-state {
   width: 100%;
   height: 100%;
   border-radius: 40px;
-  position: sticky;
+  position: relative;
   overflow: hidden;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
   background-position: center;
-  transition: background 0.8s;
+  transition: background 0.4s;
 }
 
 .common-button__elevated {
@@ -41,23 +70,35 @@
   }
 }
 
-.layer-state__elevated:hover {
-  @media (prefers-color-scheme: light) {
-    background: rgb(var(--md-sys-light-primary) / var(--md-sys-light-state-hover-state-layer-opacity));
-  }
-  @media (prefers-color-scheme: dark) {
-    background: rgb(var(--md-sys-dark-primary) / var(--md-sys-dark-state-hover-state-layer-opacity));
-  }
+.common-button__elevated:not(:disabled)
+.layer-state__elevated:hover,
+.common-button__outlined:not(:disabled)
+.layer-state__outlined:hover,
+.common-button__text:not(:disabled)
+.layer-state__text:hover {
+  background: var(--md-sys-outlined-hover-layer-state) radial-gradient(circle, transparent 1%, var(--md-sys-outlined-hover-layer-state) 1%) center/15000%;
 }
 
-.layer-state__elevated:active {
+.common-button__elevated:not(:disabled)
+.layer-state__elevated:active,
+.common-button__outlined:not(:disabled)
+.layer-state__outlined:active,
+.common-button__text:not(:disabled)
+.layer-state__text:active {
   background-size: 100%;
   transition: background 0s;
+  background-color: var(--md-sys-outlined-pressed-layer-state);
+}
+
+.common-button__elevated:disabled, .common-button__filled:disabled, .common-button__tonal:disabled {
+  box-shadow: none;
   @media (prefers-color-scheme: light) {
-    background: rgb(var(--md-sys-light-primary) / 0.15);
+    background: rgb(var(--md-sys-light-on-surface)/ var(--md-sys-light-state-hover-state-layer-opacity));
+    color: rgb(var(--md-sys-light-on-surface)/ var(--md-sys-light-state-disabled-state-layer-opacity));
   }
   @media (prefers-color-scheme: dark) {
-    background: rgb(var(--md-sys-dark-primary) / 0.15);
+    background: rgb(var(--md-sys-dark-on-surface)/ var(--md-sys-dark-state-hover-state-layer-opacity));
+    color: rgb(var(--md-sys-dark-on-surface)/ var(--md-sys-dark-state-disabled-state-layer-opacity));
   }
 }
 
@@ -72,24 +113,16 @@
   }
 }
 
+.common-button__filled:not(:disabled)
 .layer-state__filled:hover {
-  @media (prefers-color-scheme: light) {
-    background: rgb(var(--md-sys-light-on-primary) / 0.15);
-  }
-  @media (prefers-color-scheme: dark) {
-    background: rgb(var(--md-sys-dark-0n-primary) / 0.15);
-  }
+  background: var(--md-sys-filled-hover-layer-state) radial-gradient(circle, transparent 1%, var(--md-sys-filled-hover-layer-state) 1%) center/15000%;
 }
 
+.common-button__filled:not(:disabled)
 .layer-state__filled:active {
   background-size: 100%;
   transition: background 0s;
-  @media (prefers-color-scheme: light) {
-    background: rgb(var(--md-sys-light-on-primary) / 0.3) radial-gradient(circle, transparent 1%, rgb(var(--md-sys-light-on-primary) / 0.3) 1%) center/15000%;
-  }
-  @media (prefers-color-scheme: dark) {
-    background: rgb(var(--md-sys-dark-on-primary) / 0.3);
-  }
+  background-color: var(--md-sys-filled-pressed-layer-state);
 }
 
 .common-button__outlined {
@@ -100,6 +133,35 @@
   @media (prefers-color-scheme: dark) {
     color: rgb(var(--md-sys-dark-primary));
     border: 1px solid rgb(var(--md-sys-dark-outline));
+  }
+}
+
+.common-button__outlined:disabled {
+  @media (prefers-color-scheme: light) {
+    color: rgb(var(--md-sys-light-on-surface)/ var(--md-sys-light-state-disabled-state-layer-opacity));
+    border: 1px solid rgb(var(--md-sys-light-on-surface)/ var(--md-sys-light-state-hover-state-layer-opacity));
+  }
+  @media (prefers-color-scheme: dark) {
+    color: rgb(var(--md-sys-dark-on-surface)/ var(--md-sys-dark-state-disabled-state-layer-opacity));
+    border: 1px solid rgb(var(--md-sys-dark-on-surface)/ var(--md-sys-dark-state-hover-state-layer-opacity));
+  }
+}
+
+.common-button__text {
+  @media (prefers-color-scheme: light) {
+    color: rgb(var(--md-sys-light-primary));
+  }
+  @media (prefers-color-scheme: dark) {
+    color: rgb(var(--md-sys-dark-primary));
+  }
+}
+
+.common-button__text:disabled {
+  @media (prefers-color-scheme: light) {
+    color: rgb(var(--md-sys-light-on-surface)/ var(--md-sys-light-state-disabled-state-layer-opacity));
+  }
+  @media (prefers-color-scheme: dark) {
+    color: rgb(var(--md-sys-dark-on-surface)/ var(--md-sys-dark-state-disabled-state-layer-opacity));
   }
 }
 
@@ -114,11 +176,11 @@
   }
 }
 
-.common-button__text {
-  @media (prefers-color-scheme: light) {
-    color: rgb(var(--md-sys-light-primary));
-  }
-  @media (prefers-color-scheme: dark) {
-    color: rgb(var(--md-sys-dark-primary));
-  }
+.common-button__tonal:not(:disabled) .layer-state__tonal:hover {
+  background: var(--md-sys-tonal-hover-layer-state) radial-gradient(circle, transparent 1%, var(--md-sys-tonal-hover-layer-state) 1%) center/15000%;
+}
+.common-button__tonal:not(:disabled) .layer-state__tonal:active {
+  background-color: var(--md-sys-tonal-pressed-layer-state);
+  background-size: 100%;
+  transition: background 0s;
 }

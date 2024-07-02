@@ -1,6 +1,9 @@
-<button class="common-button--container common-button__<%= locals[:style] %>">
+<button class="common-button--container common-button__<%= locals[:style] %>" <%= "disabled" if locals[:disabled] %> >
   <div class="layer-state layer-state__<%= locals[:style] %>">
     <div class="common-button--content">
+      <% if locals[:icon] %>
+        <%= render "material_design/icons/icon", locals: {icon: locals[:icon], size: 18} %>
+      <% end %>
       <%= locals[:label] %>
     </div>
   </div>
