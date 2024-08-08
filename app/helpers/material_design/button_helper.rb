@@ -1,35 +1,21 @@
 module MaterialDesign
   module ButtonHelper
-    def md_button_to(label, path, variant: "filled", method: "post", type: "submit", disabled: false, **options)
-      form_options = { method: method, action: path, class: "common-button--container common-button__#{variant}" }
-
-      options.except(:data).each do |key, value|
-        form_options[key] = value
-      end
-
-      input_options = { value: label, type: type, class: "layer-state layer-state__#{variant} text-sm" }
-      if options[:data]
-        options[:data].each do |key, value|
-          input_options["data-#{key.to_s.dasherize}"] = value
-        end
-      end
-
-      content_tag(:form, form_options) do
-        content_tag(:input, input_options) do
-          content_tag(:div, class: 'common-button--content') do
+    def md_button_to(name, options = nil, html_options = {})
+      style = html_options[:style] || "filled"
+      variant = html_options[:variant] || "primary"
+      html_options[:class] = "button--container button__#{style}--#{variant}"
+      button_to(options, html_options.except(:style)) do
+        content_tag(:div, class: "layer-state layer-state__#{style}") do
+          content_tag(:div, class: "button--content") do
+            name
           end
         end
       end
     end
 
-    def md_button_tag(label, path, name: "button", type: "submit", disabled: false)
-      content_tag(:button, name: name, type: type, disabled: disabled, class: 'common-button--container common-button__outlined') do
-        content_tag(:div, class: 'layer-state layer-state__outlined') do
-          content_tag(:div, class: 'common-button--content') do
-            label
-          end
-        end
-      end
+    def md_button_tag(label)
+      content_tag(:p, label, class: "test-hehe")
     end
   end
 end
+

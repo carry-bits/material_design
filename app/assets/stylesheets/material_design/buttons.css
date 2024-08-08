@@ -1,33 +1,213 @@
 @media (prefers-color-scheme: light) {
   :root {
-    --md-sys-tonal-hover-layer-state: rgb(var(--md-sys-light-on-secondary-container) / var(--md-sys-light-state-hover-state-layer-opacity));
-    --md-sys-tonal-pressed-layer-state: rgb(var(--md-sys-light-on-secondary-container) / var(--md-sys-light-state-pressed-state-layer-opacity));
-    --md-sys-filled-hover-layer-state: rgb(var(--md-sys-light-on-primary) / var(--md-sys-light-state-hover-state-layer-opacity));
-    --md-sys-filled-pressed-layer-state: rgb(var(--md-sys-light-on-primary) / var(--md-sys-light-state-pressed-state-layer-opacity));
-    --md-sys-outlined-hover-layer-state: rgb(var(--md-sys-light-primary) / var(--md-sys-light-state-hover-state-layer-opacity));
-    --md-sys-outlined-pressed-layer-state: rgb(var(--md-sys-light-primary) / var(--md-sys-light-state-pressed-state-layer-opacity));
+    --md-sys-tonal-primary-hover-layer-state: rgb(
+      var(--md-sys-light-on-primary-container) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-tonal-primary-pressed-layer-state: rgb(
+      var(--md-sys-light-on-primary-container) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-tonal-secondary-hover-layer-state: rgb(
+      var(--md-sys-light-on-secondary-container) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-tonal-secondary-pressed-layer-state: rgb(
+      var(--md-sys-light-on-secondary-container) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-tonal-tertiary-hover-layer-state: rgb(
+      var(--md-sys-light-on-tertiary-container) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-tonal-tertiary-pressed-layer-state: rgb(
+      var(--md-sys-light-on-tertiary-container) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-tonal-error-hover-layer-state: rgb(
+      var(--md-sys-light-on-error-container) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-tonal-error-pressed-layer-state: rgb(
+      var(--md-sys-light-on-error-container) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-filled-primary-hover-layer-state: rgb(
+      var(--md-sys-light-on-primary) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-filled-primary-pressed-layer-state: rgb(
+      var(--md-sys-light-on-primary) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-filled-secondary-hover-layer-state: rgb(
+      var(--md-sys-light-on-secondary) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-filled-secondary-pressed-layer-state: rgb(
+      var(--md-sys-light-on-secondary) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-filled-tertiary-hover-layer-state: rgb(
+      var(--md-sys-light-on-tertiary) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-filled-tertiary-pressed-layer-state: rgb(
+      var(--md-sys-light-on-tertiary) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-filled-error-hover-layer-state: rgb(
+      var(--md-sys-light-on-error) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-filled-error-pressed-layer-state: rgb(
+      var(--md-sys-light-on-error) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-outlined-primary-hover-layer-state: rgb(
+      var(--md-sys-light-primary) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-outlined-primary-pressed-layer-state: rgb(
+      var(--md-sys-light-primary) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-outlined-secondary-hover-layer-state: rgb(
+      var(--md-sys-light-secondary) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-outlined-secondary-pressed-layer-state: rgb(
+      var(--md-sys-light-secondary) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-outlined-tertiary-hover-layer-state: rgb(
+      var(--md-sys-light-tertiary) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-outlined-tertiary-pressed-layer-state: rgb(
+      var(--md-sys-light-tertiary) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-outlined-error-hover-layer-state: rgb(
+      var(--md-sys-light-error) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-outlined-error-pressed-layer-state: rgb(
+      var(--md-sys-light-error) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --md-sys-tonal-hover-layer-state: rgb(var(--md-sys-dark-on-secondary-container) / var(--md-sys-dark-state-hover-state-layer-opacity));
-    --md-sys-tonal-pressed-layer-state: rgb(var(--md-sys-dark-on-secondary-container) / var(--md-sys-dark-state-pressed-state-layer-opacity));
-    --md-sys-filled-hover-layer-state: rgb(var(--md-sys-dark-on-primary) / var(--md-sys-dark-state-hover-state-layer-opacity));
-    --md-sys-filled-pressed-layer-state: rgb(var(--md-sys-dark-on-primary) / var(--md-sys-dark-state-pressed-state-layer-opacity));
-    --md-sys-outlined-hover-layer-state: rgb(var(--md-sys-dark-primary) / var(--md-sys-dark-state-hover-state-layer-opacity));
-    --md-sys-outlined-pressed-layer-state: rgb(var(--md-sys-dark-primary) / var(--md-sys-dark-state-pressed-state-layer-opacity));
+    --md-sys-tonal-primary-hover-layer-state: rgb(
+      var(--md-sys-light-on-primary-container) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-tonal-primary-pressed-layer-state: rgb(
+      var(--md-sys-light-on-primary-container) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-tonal-secondary-hover-layer-state: rgb(
+      var(--md-sys-light-on-secondary-container) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-tonal-secondary-pressed-layer-state: rgb(
+      var(--md-sys-light-on-secondary-container) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-tonal-tertiary-hover-layer-state: rgb(
+      var(--md-sys-light-on-tertiary-container) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-tonal-tertiary-pressed-layer-state: rgb(
+      var(--md-sys-light-on-tertiary-container) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-tonal-error-hover-layer-state: rgb(
+      var(--md-sys-light-on-error-container) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-tonal-error-pressed-layer-state: rgb(
+      var(--md-sys-light-on-error-container) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-filled-primary-hover-layer-state: rgb(
+      var(--md-sys-light-on-primary) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-filled-primary-pressed-layer-state: rgb(
+      var(--md-sys-light-on-primary) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-filled-secondary-hover-layer-state: rgb(
+      var(--md-sys-light-on-secondary) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-filled-secondary-pressed-layer-state: rgb(
+      var(--md-sys-light-on-secondary) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-filled-tertiary-hover-layer-state: rgb(
+      var(--md-sys-light-on-tertiary) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-filled-tertiary-pressed-layer-state: rgb(
+      var(--md-sys-light-on-tertiary) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-filled-error-hover-layer-state: rgb(
+      var(--md-sys-light-on-error) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-filled-error-pressed-layer-state: rgb(
+      var(--md-sys-light-on-error) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-outlined-primary-hover-layer-state: rgb(
+      var(--md-sys-light-primary) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-outlined-primary-pressed-layer-state: rgb(
+      var(--md-sys-light-primary) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-outlined-secondary-hover-layer-state: rgb(
+      var(--md-sys-light-secondary) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-outlined-secondary-pressed-layer-state: rgb(
+      var(--md-sys-light-secondary) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-outlined-tertiary-hover-layer-state: rgb(
+      var(--md-sys-light-tertiary) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-outlined-tertiary-pressed-layer-state: rgb(
+      var(--md-sys-light-tertiary) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
+    --md-sys-outlined-error-hover-layer-state: rgb(
+      var(--md-sys-light-error) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    --md-sys-outlined-error-pressed-layer-state: rgb(
+      var(--md-sys-light-error) /
+        var(--md-sys-light-state-pressed-state-layer-opacity)
+    );
   }
 }
 
-.common-button--container {
+.button--container {
   height: 40px;
   border-radius: 40px;
   position: relative;
   width: 100%;
 }
 
-.common-button--content {
+.button--content {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -40,7 +220,7 @@
   font-size: 14px;
 }
 
-.common-button--icon {
+.button--icon {
   height: 18px;
   height: 18px;
 }
@@ -60,7 +240,7 @@
   transition: background 0.4s;
 }
 
-.common-button__elevated {
+.button__elevated--primary {
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 1px 1px rgba(0, 0, 0, 0.15);
   @media (prefers-color-scheme: light) {
     background: rgb(var(--md-sys-light-surface-container-low));
@@ -72,39 +252,158 @@
   }
 }
 
-.common-button__elevated:not(:disabled)
-.layer-state__elevated:hover,
-.common-button__outlined:not(:disabled)
-.layer-state__outlined:hover,
-.common-button__text:not(:disabled)
-.layer-state__text:hover {
-  background: var(--md-sys-outlined-hover-layer-state) radial-gradient(circle, transparent 1%, var(--md-sys-outlined-hover-layer-state) 1%) center/15000%;
-}
-
-.common-button__elevated:not(:disabled)
-.layer-state__elevated:active,
-.common-button__outlined:not(:disabled)
-.layer-state__outlined:active,
-.common-button__text:not(:disabled)
-.layer-state__text:active {
-  background-size: 100%;
-  transition: background 0s;
-  background-color: var(--md-sys-outlined-pressed-layer-state);
-}
-
-.common-button__elevated:disabled, .common-button__filled:disabled, .common-button__tonal:disabled {
-  box-shadow: none;
+.button__elevated--secondary {
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 1px 1px rgba(0, 0, 0, 0.15);
   @media (prefers-color-scheme: light) {
-    background: rgb(var(--md-sys-light-on-surface)/ var(--md-sys-light-state-hover-state-layer-opacity));
-    color: rgb(var(--md-sys-light-on-surface)/ var(--md-sys-light-state-disabled-state-layer-opacity));
+    background: rgb(var(--md-sys-light-surface-container-low));
+    color: rgb(var(--md-sys-light-secondary));
   }
   @media (prefers-color-scheme: dark) {
-    background: rgb(var(--md-sys-dark-on-surface)/ var(--md-sys-dark-state-hover-state-layer-opacity));
-    color: rgb(var(--md-sys-dark-on-surface)/ var(--md-sys-dark-state-disabled-state-layer-opacity));
+    background: rgb(var(--md-sys-dark-surface-container-low));
+    color: rgb(var(--md-sys-dark-secondary));
   }
 }
 
-.common-button__filled {
+.button__elevated--tertiary {
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 1px 1px rgba(0, 0, 0, 0.15);
+  @media (prefers-color-scheme: light) {
+    background: rgb(var(--md-sys-light-surface-container-low));
+    color: rgb(var(--md-sys-light-tertiary));
+  }
+  @media (prefers-color-scheme: dark) {
+    background: rgb(var(--md-sys-dark-surface-container-low));
+    color: rgb(var(--md-sys-dark-tertiary));
+  }
+}
+
+.button__elevated--error {
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 1px 1px rgba(0, 0, 0, 0.15);
+  @media (prefers-color-scheme: light) {
+    background: rgb(var(--md-sys-light-surface-container-low));
+    color: rgb(var(--md-sys-light-error));
+  }
+  @media (prefers-color-scheme: dark) {
+    background: rgb(var(--md-sys-dark-surface-container-low));
+    color: rgb(var(--md-sys-dark-error));
+  }
+}
+
+.button__elevated--primary:not(:disabled) .layer-state__elevated:hover,
+.button__outlined--primary:not(:disabled) .layer-state__outlined:hover,
+.button__text--primary:not(:disabled) .layer-state__text:hover {
+  background: var(--md-sys-outlined-primary-hover-layer-state)
+    radial-gradient(
+      circle,
+      transparent 1%,
+      var(--md-sys-outlined-primary-hover-layer-state) 1%
+    )
+    center/15000%;
+}
+
+.button__elevated--secondary:not(:disabled) .layer-state__elevated:hover,
+.button__outlined--secondary:not(:disabled) .layer-state__outlined:hover,
+.button__text--secondary:not(:disabled) .layer-state__text:hover {
+  background: var(--md-sys-outlined-secondary-hover-layer-state)
+    radial-gradient(
+      circle,
+      transparent 1%,
+      var(--md-sys-outlined-secondary-hover-layer-state) 1%
+    )
+    center/15000%;
+}
+
+.button__elevated--tertiary:not(:disabled) .layer-state__elevated:hover,
+.button__outlined--tertiary:not(:disabled) .layer-state__outlined:hover,
+.button__text--tertiary:not(:disabled) .layer-state__text:hover {
+  background: var(--md-sys-outlined-tertiary-hover-layer-state)
+    radial-gradient(
+      circle,
+      transparent 1%,
+      var(--md-sys-outlined-tertiary-hover-layer-state) 1%
+    )
+    center/15000%;
+}
+
+.button__elevated--error:not(:disabled) .layer-state__elevated:hover,
+.button__outlined--error:not(:disabled) .layer-state__outlined:hover,
+.button__text--error:not(:disabled) .layer-state__text:hover {
+  background: var(--md-sys-outlined-error-hover-layer-state)
+    radial-gradient(
+      circle,
+      transparent 1%,
+      var(--md-sys-outlined-error-hover-layer-state) 1%
+    )
+    center/15000%;
+}
+
+.button__elevated--primary:not(:disabled) .layer-state__elevated:active,
+.button__outlined--primary:not(:disabled) .layer-state__outlined:active,
+.button__text--primary:not(:disabled) .layer-state__text:active {
+  background-size: 100%;
+  transition: background 0s;
+  background-color: var(--md-sys-outlined-primary-pressed-layer-state);
+}
+
+.button__elevated--secondary:not(:disabled) .layer-state__elevated:active,
+.button__outlined--secondary:not(:disabled) .layer-state__outlined:active,
+.button__text--secondary:not(:disabled) .layer-state__text:active {
+  background-size: 100%;
+  transition: background 0s;
+  background-color: var(--md-sys-outlined-secondary-pressed-layer-state);
+}
+
+.button__elevated--tertiary:not(:disabled) .layer-state__elevated:active,
+.button__outlined--tertiary:not(:disabled) .layer-state__outlined:active,
+.button__text--tertiary:not(:disabled) .layer-state__text:active {
+  background-size: 100%;
+  transition: background 0s;
+  background-color: var(--md-sys-outlined-tertiary-pressed-layer-state);
+}
+
+.button__elevated--error:not(:disabled) .layer-state__elevated:active,
+.button__outlined--error:not(:disabled) .layer-state__outlined:active,
+.button__text--error:not(:disabled) .layer-state__text:active {
+  background-size: 100%;
+  transition: background 0s;
+  background-color: var(--md-sys-outlined-error-pressed-layer-state);
+}
+
+.button__elevated--primary:disabled,
+.button__elevated--secondary:disabled,
+.button__elevated--tertiary:disabled,
+.button__elevated--error:disabled,
+.button__filled--primary:disabled,
+.button__filled--secondary:disabled,
+.button__filled--tertiary:disabled,
+.button__filled--error:disabled,
+.button__tonal--primary:disabled,
+.button__tonal--secondary:disabled,
+.button__tonal--tertiary:disabled,
+.button__tonal--error:disabled {
+  box-shadow: none;
+  @media (prefers-color-scheme: light) {
+    background: rgb(
+      var(--md-sys-light-on-surface) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    );
+    color: rgb(
+      var(--md-sys-light-on-surface) /
+        var(--md-sys-light-state-disabled-state-layer-opacity)
+    );
+  }
+  @media (prefers-color-scheme: dark) {
+    background: rgb(
+      var(--md-sys-dark-on-surface) /
+        var(--md-sys-dark-state-hover-state-layer-opacity)
+    );
+    color: rgb(
+      var(--md-sys-dark-on-surface) /
+        var(--md-sys-dark-state-disabled-state-layer-opacity)
+    );
+  }
+}
+
+.button__filled--primary {
   @media (prefers-color-scheme: light) {
     background: rgb(var(--md-sys-light-primary));
     color: rgb(var(--md-sys-light-on-primary));
@@ -115,19 +414,104 @@
   }
 }
 
-.common-button__filled:not(:disabled)
-.layer-state__filled:hover {
-  background: var(--md-sys-filled-hover-layer-state) radial-gradient(circle, transparent 1%, var(--md-sys-filled-hover-layer-state) 1%) center/15000%;
+.button__filled--secondary {
+  @media (prefers-color-scheme: light) {
+    background: rgb(var(--md-sys-light-secondary));
+    color: rgb(var(--md-sys-light-on-secondary));
+  }
+  @media (prefers-color-scheme: dark) {
+    background: rgb(var(--md-sys-dark-secondary));
+    color: rgb(var(--md-sys-dark-on-secondary));
+  }
 }
 
-.common-button__filled:not(:disabled)
-.layer-state__filled:active {
+.button__filled--tertiary {
+  @media (prefers-color-scheme: light) {
+    background: rgb(var(--md-sys-light-tertiary));
+    color: rgb(var(--md-sys-light-on-tertiary));
+  }
+  @media (prefers-color-scheme: dark) {
+    background: rgb(var(--md-sys-dark-tertiary));
+    color: rgb(var(--md-sys-dark-on-tertiary));
+  }
+}
+
+.button__filled--error {
+  @media (prefers-color-scheme: light) {
+    background: rgb(var(--md-sys-light-error));
+    color: rgb(var(--md-sys-light-on-error));
+  }
+  @media (prefers-color-scheme: dark) {
+    background: rgb(var(--md-sys-dark-error));
+    color: rgb(var(--md-sys-dark-on-error));
+  }
+}
+
+.button__filled--primary:not(:disabled) .layer-state__filled:hover {
+  background: var(--md-sys-filled-primary-hover-layer-state)
+    radial-gradient(
+      circle,
+      transparent 1%,
+      var(--md-sys-filled-primary-hover-layer-state) 1%
+    )
+    center/15000%;
+}
+
+.button__filled--secondary:not(:disabled) .layer-state__filled:hover {
+  background: var(--md-sys-filled-secondary-hover-layer-state)
+    radial-gradient(
+      circle,
+      transparent 1%,
+      var(--md-sys-filled-secondary-hover-layer-state) 1%
+    )
+    center/15000%;
+}
+
+.button__filled--tertiary:not(:disabled) .layer-state__filled:hover {
+  background: var(--md-sys-filled-tertiary-hover-layer-state)
+    radial-gradient(
+      circle,
+      transparent 1%,
+      var(--md-sys-filled-tertiary-hover-layer-state) 1%
+    )
+    center/15000%;
+}
+
+.button__filled--error:not(:disabled) .layer-state__filled:hover {
+  background: var(--md-sys-filled-error-hover-layer-state)
+    radial-gradient(
+      circle,
+      transparent 1%,
+      var(--md-sys-filled-error-hover-layer-state) 1%
+    )
+    center/15000%;
+}
+
+.button__filled--primary:not(:disabled) .layer-state__filled:active {
   background-size: 100%;
   transition: background 0s;
-  background-color: var(--md-sys-filled-pressed-layer-state);
+  background-color: var(--md-sys-filled-primary-pressed-layer-state);
 }
 
-.common-button__outlined {
+.button__filled--secondary:not(:disabled) .layer-state__filled:active {
+  background-size: 100%;
+  transition: background 0s;
+  background-color: var(--md-sys-filled-secondary-pressed-layer-state);
+}
+
+.button__filled--tertiary:not(:disabled) .layer-state__filled:active {
+  background-size: 100%;
+  transition: background 0s;
+  background-color: var(--md-sys-filled-tertiary-pressed-layer-state);
+}
+
+.button__filled--error:not(:disabled) .layer-state__filled:active {
+  background-size: 100%;
+  transition: background 0s;
+  background-color: var(--md-sys-filled-error-pressed-layer-state);
+}
+
+.button__outlined--primary {
   @media (prefers-color-scheme: light) {
     color: rgb(var(--md-sys-light-primary));
     border: 1px solid rgb(var(--md-sys-light-outline));
@@ -138,18 +522,68 @@
   }
 }
 
-.common-button__outlined:disabled {
+.button__outlined--secondary {
   @media (prefers-color-scheme: light) {
-    color: rgb(var(--md-sys-light-on-surface)/ var(--md-sys-light-state-disabled-state-layer-opacity));
-    border: 1px solid rgb(var(--md-sys-light-on-surface)/ var(--md-sys-light-state-hover-state-layer-opacity));
+    color: rgb(var(--md-sys-light-secondary));
+    border: 1px solid rgb(var(--md-sys-light-outline));
   }
   @media (prefers-color-scheme: dark) {
-    color: rgb(var(--md-sys-dark-on-surface)/ var(--md-sys-dark-state-disabled-state-layer-opacity));
-    border: 1px solid rgb(var(--md-sys-dark-on-surface)/ var(--md-sys-dark-state-hover-state-layer-opacity));
+    color: rgb(var(--md-sys-dark-secondary));
+    border: 1px solid rgb(var(--md-sys-dark-outline));
   }
 }
 
-.common-button__text {
+.button__outlined--tertiary {
+  @media (prefers-color-scheme: light) {
+    color: rgb(var(--md-sys-light-tertiary));
+    border: 1px solid rgb(var(--md-sys-light-outline));
+  }
+  @media (prefers-color-scheme: dark) {
+    color: rgb(var(--md-sys-dark-tertiary));
+    border: 1px solid rgb(var(--md-sys-dark-outline));
+  }
+}
+
+.button__outlined--error {
+  @media (prefers-color-scheme: light) {
+    color: rgb(var(--md-sys-light-error));
+    border: 1px solid rgb(var(--md-sys-light-outline));
+  }
+  @media (prefers-color-scheme: dark) {
+    color: rgb(var(--md-sys-dark-error));
+    border: 1px solid rgb(var(--md-sys-dark-outline));
+  }
+}
+
+.button__outlined--primary:disabled,
+.button__outlined--secondary:disabled,
+.button__outlined--tertiary:disabled,
+.button__outlined--error:disabled {
+  @media (prefers-color-scheme: light) {
+    color: rgb(
+      var(--md-sys-light-on-surface) /
+        var(--md-sys-light-state-disabled-state-layer-opacity)
+    );
+    border: 1px solid
+      rgb(
+        var(--md-sys-light-on-surface) /
+          var(--md-sys-light-state-hover-state-layer-opacity)
+      );
+  }
+  @media (prefers-color-scheme: dark) {
+    color: rgb(
+      var(--md-sys-dark-on-surface) /
+        var(--md-sys-dark-state-disabled-state-layer-opacity)
+    );
+    border: 1px solid
+      rgb(
+        var(--md-sys-dark-on-surface) /
+          var(--md-sys-dark-state-hover-state-layer-opacity)
+      );
+  }
+}
+
+.button__text--primary {
   @media (prefers-color-scheme: light) {
     color: rgb(var(--md-sys-light-primary));
   }
@@ -158,16 +592,63 @@
   }
 }
 
-.common-button__text:disabled {
+.button__text--secondary {
   @media (prefers-color-scheme: light) {
-    color: rgb(var(--md-sys-light-on-surface)/ var(--md-sys-light-state-disabled-state-layer-opacity));
+    color: rgb(var(--md-sys-light-secondary));
   }
   @media (prefers-color-scheme: dark) {
-    color: rgb(var(--md-sys-dark-on-surface)/ var(--md-sys-dark-state-disabled-state-layer-opacity));
+    color: rgb(var(--md-sys-dark-secondary));
   }
 }
 
-.common-button__tonal {
+.button__text--tertiary {
+  @media (prefers-color-scheme: light) {
+    color: rgb(var(--md-sys-light-tertiary));
+  }
+  @media (prefers-color-scheme: dark) {
+    color: rgb(var(--md-sys-dark-tertiary));
+  }
+}
+
+.button__text--error {
+  @media (prefers-color-scheme: light) {
+    color: rgb(var(--md-sys-light-error));
+  }
+  @media (prefers-color-scheme: dark) {
+    color: rgb(var(--md-sys-dark-error));
+  }
+}
+
+.button__text--primary:disabled,
+.button__text--secondary:disabled,
+.button__text--tertiary:disabled,
+.button__text--error:disabled {
+  @media (prefers-color-scheme: light) {
+    color: rgb(
+      var(--md-sys-light-on-surface) /
+        var(--md-sys-light-state-disabled-state-layer-opacity)
+    );
+  }
+  @media (prefers-color-scheme: dark) {
+    color: rgb(
+      var(--md-sys-dark-on-surface) /
+        var(--md-sys-dark-state-disabled-state-layer-opacity)
+    );
+  }
+}
+
+.button__tonal--primary {
+  @media (prefers-color-scheme: light) {
+    background: rgb(var(--md-sys-light-primary-container));
+    color: rgb(var(--md-sys-light-on-primary-container));
+  }
+  @media (prefers-color-scheme: dark) {
+    background: rgb(var(--md-sys-dark-primary-container));
+    color: rgb(var(--md-sys-dark-on-primary-container));
+  }
+}
+
+.button__tonal--secondary {
   @media (prefers-color-scheme: light) {
     background: rgb(var(--md-sys-light-secondary-container));
     color: rgb(var(--md-sys-light-on-secondary-container));
@@ -178,12 +659,88 @@
   }
 }
 
-.common-button__tonal:not(:disabled) .layer-state__tonal:hover {
-  background: var(--md-sys-tonal-hover-layer-state) radial-gradient(circle, transparent 1%, var(--md-sys-tonal-hover-layer-state) 1%) center/15000%;
+.button__tonal--tertiary {
+  @media (prefers-color-scheme: light) {
+    background: rgb(var(--md-sys-light-tertiary-container));
+    color: rgb(var(--md-sys-light-on-tertiary-container));
+  }
+  @media (prefers-color-scheme: dark) {
+    background: rgb(var(--md-sys-dark-tertiary-container));
+    color: rgb(var(--md-sys-dark-on-tertiary-container));
+  }
 }
 
-.common-button__tonal:not(:disabled) .layer-state__tonal:active {
-  background-color: var(--md-sys-tonal-pressed-layer-state);
+.button__tonal--error {
+  @media (prefers-color-scheme: light) {
+    background: rgb(var(--md-sys-light-error-container));
+    color: rgb(var(--md-sys-light-on-error-container));
+  }
+  @media (prefers-color-scheme: dark) {
+    background: rgb(var(--md-sys-dark-error-container));
+    color: rgb(var(--md-sys-dark-on-error-container));
+  }
+}
+
+.button__tonal--primary:not(:disabled) .layer-state__tonal:hover {
+  background: var(--md-sys-tonal-primary-hover-layer-state)
+    radial-gradient(
+      circle,
+      transparent 1%,
+      var(--md-sys-tonal-primary-hover-layer-state) 1%
+    )
+    center/15000%;
+}
+
+.button__tonal--secondary:not(:disabled) .layer-state__tonal:hover {
+  background: var(--md-sys-tonal-secondary-hover-layer-state)
+    radial-gradient(
+      circle,
+      transparent 1%,
+      var(--md-sys-tonal-secondary-hover-layer-state) 1%
+    )
+    center/15000%;
+}
+
+.button__tonal--tertiary:not(:disabled) .layer-state__tonal:hover {
+  background: var(--md-sys-tonal-tertiary-hover-layer-state)
+    radial-gradient(
+      circle,
+      transparent 1%,
+      var(--md-sys-tonal-tertiary-hover-layer-state) 1%
+    )
+    center/15000%;
+}
+
+.button__tonal--error:not(:disabled) .layer-state__tonal:hover {
+  background: var(--md-sys-tonal-error-hover-layer-state)
+    radial-gradient(
+      circle,
+      transparent 1%,
+      var(--md-sys-tonal-error-hover-layer-state) 1%
+    )
+    center/15000%;
+}
+
+.button__tonal--primary:not(:disabled) .layer-state__tonal:active {
+  background-color: var(--md-sys-tonal-primary-pressed-layer-state);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.button__tonal--secondary:not(:disabled) .layer-state__tonal:active {
+  background-color: var(--md-sys-tonal-secondary-pressed-layer-state);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.button__tonal--tertiary:not(:disabled) .layer-state__tonal:active {
+  background-color: var(--md-sys-tonal-tertiary-pressed-layer-state);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.button__tonal--error:not(:disabled) .layer-state__tonal:active {
+  background-color: var(--md-sys-tonal-primary-pressed-layer-state);
   background-size: 100%;
   transition: background 0s;
 }
