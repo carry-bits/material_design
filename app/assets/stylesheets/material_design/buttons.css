@@ -204,7 +204,8 @@
   height: 40px;
   border-radius: 40px;
   position: relative;
-  width: 100%;
+  width: fit-content;
+  font-size: 14px;
 }
 
 .button--content {
@@ -217,12 +218,6 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   gap: 8px;
-  font-size: 14px;
-}
-
-.button--icon {
-  height: 18px;
-  height: 18px;
 }
 
 .icon-button--container {
