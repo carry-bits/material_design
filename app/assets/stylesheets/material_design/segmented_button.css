@@ -1,0 +1,58 @@
+.segmented-control {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: var(--md-sys-surface);
+    width: fit-content;
+  }
+
+  .segmented-control label {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-left: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    color: var(--md-sys-on-surface);
+    background-color: transparent;
+  }
+
+  .segmented-control label:first-child {
+    border-left: none;
+    border-radius: 12px 0 0 12px;
+  }
+
+  .segmented-control label:last-child {
+    border-radius: 0 12px 12px 0;
+  }
+
+  .segmented-control input[type="radio"] {
+    display: none;
+  }
+
+  .segmented-control input[type="radio"]:checked + label {
+    background-color: rgb(var(--md-sys-light-primary-container)) !important;
+    color: rgb(var(--md-sys-on-primary-container));
+  }
+
+  .segmented-control label.active {
+    background-color: rgb(var(--md-sys-light-primary-container)) !important;
+    color: rgb(var(--md-sys-on-primary-container));
+  }
+
+  .checkmark {
+    margin-right: 8px;
+    visibility: hidden;
+  }
+
+  .segmented-control input[type="radio"]:checked + label .checkmark {
+    visibility: visible;
+  }
+
+
+  .segmented-control label:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+
