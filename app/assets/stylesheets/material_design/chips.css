@@ -11,10 +11,11 @@
 
   @media (prefers-color-scheme: light) {
     background: rgb(var(--md-sys-light-secondary-fixed));
+    color: rgb(var(--md-sys-dark-on-secondary-fixed));
   }
 
   @media (prefers-color-scheme: dark) {
     background: rgb(var(--md-sys-dark-secondary-fixed));
-    color: rgb(var(--md-sys-dark-on-surface-variant));
+    color: rgb(var(--md-sys-dark-on-secondary-fixed));
   }
 }
