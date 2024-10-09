@@ -1,0 +1,13 @@
+<div class="segmented-control">
+  <% options.each do |option| %>
+    <%= form.radio_button field_name, option[:value], checked: option[:checked], id: "#{field_name}_#{option[:value]}" %>
+    <%= form.label "#{field_name}_#{option[:value]}", class: "segmented-btn grey-hover #{option[:class]}" do %>
+      <% if option[:checked] %>
+        <div class="mr-2">
+          <%= render "material_design/icons/icon", locals: { size: 18, icon: "check" } %>
+        </div>
+      <% end %>
+      <%= option[:label] %>
+    <% end %>
+  <% end %>
+</div>
