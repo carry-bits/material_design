@@ -54,8 +54,16 @@
   padding: 0px 8px;
 }
 
-.chip:active {
+.chip.selected {
   background-size: 100%;
   transition: background 0s;
-  background-color: var(--md-sys-pressed-layer-state);
+  @media (prefers-color-scheme: light) {
+    background: rgb(var(--md-sys-light-secondary-container));
+    color: rgb(var(--md-sys-light-on-secondary-container));
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background: rgb(var(--md-sys-dark-secondary-container));
+    color: rgb(var(--md-sys-dark-on-secondary-container));
+  }
 }
