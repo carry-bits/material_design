@@ -7,6 +7,10 @@
     --md-sys-pressed-layer-state: rgb(
       var(--md-sys-light-on-secondary-container) / 0.1
     );
+    --md-sys-hover-selected-state: rgb(
+      var(--md-sys-light-on-secondary-container) /
+        var(--md-sys-light-state-hover-state-layer-opacity)
+    )
   }
 }
 
@@ -17,9 +21,13 @@
         var(--md-sys-dark-state-hover-state-layer-opacity)
     );
     --md-sys-pressed-layer-state: rgb(
-      var(--md-sys-dark-on-secondary-container) /
+      var(--md-sys-dark-on-secondary-container) / 
         var(--md-sys-dark-state-pressed-state-layer-opacity)
     );
+    --md-sys-hover-selected-state: rgb(
+      var(--md-sys-dark-on-secondary-container) /
+        var(--md-sys-dark-state-hover-state-layer-opacity)
+    )
   }
 }
 
@@ -66,4 +74,10 @@
     background: rgb(var(--md-sys-dark-secondary-container));
     color: rgb(var(--md-sys-dark-on-secondary-container));
   }
+}
+
+.chip.selected:hover {
+  background: var(--md-sys-hover-selected-state)
+    radial-gradient(circle, transparent 1%, var(--md-sys-hover-selected-state) 1%)
+    center/15000%;
 }
