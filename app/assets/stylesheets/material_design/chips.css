@@ -67,3 +67,7 @@
     color: rgb(var(--md-sys-dark-on-secondary-container));
   }
 }
+
+.test {
+  background: pink;
+}
