@@ -33,7 +33,7 @@
 
 .chip {
   height: 32px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   padding: 0px 8px;
   border-radius: 8px;
@@ -63,8 +63,7 @@
 }
 
 .chip.selected {
-  background-size: 100%;
-  border: 0px;
+  border: none;
   transition: background 0s;
   @media (prefers-color-scheme: light) {
     background: rgb(var(--md-sys-light-secondary-container));
@@ -77,8 +76,19 @@
   }
 }
 
-.test {
-  background: pink;
+.chip__container {
+  /* position: relative;
+  width: fit-content;*/
+  border: 1px solid LightPink;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  position: relative;
+  vertical-align: middle;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .chip.selected:hover {
@@ -89,4 +99,17 @@
       var(--md-sys-hover-selected-state) 1%
     )
     center/15000%;
+}
+
+.chip__dropdown {
+  background: LightPink;
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 100%;
+  z-index: 1051;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
 }
