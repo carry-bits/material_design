@@ -52,13 +52,13 @@ export default class extends Controller {
   openDropdown() {
     this.enter();
     this.chevronIconTarget.classList.add("rotate-180");
-    this.chipTarget.classList.add("selected");
+    // this.chipTarget.classList.add("selected");
   }
 
   closeDropdown() {
     this.leave();
     this.chevronIconTarget.classList.remove("rotate-180");
-    this.chipTarget.classList.remove("selected");
+    // this.chipTarget.classList.remove("selected");
   }
 
   setSelected() {

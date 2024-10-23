@@ -38,7 +38,7 @@
   padding: 0px 8px;
   border-radius: 8px;
   white-space: nowrap;
-
+  cursor: pointer;
   @media (prefers-color-scheme: light) {
     color: rgb(var(--md-sys-light-on-surface-variant));
     border: 1px solid rgb(var(--md-sys-light-outline-variant));
@@ -63,8 +63,7 @@
 }
 
 .chip.selected {
-  border: none;
-  transition: background 0s;
+  border-color: transparent;
   @media (prefers-color-scheme: light) {
     background: rgb(var(--md-sys-light-secondary-container));
     color: rgb(var(--md-sys-light-on-secondary-container));
@@ -77,9 +76,6 @@
 }
 
 .chip__container {
-  /* position: relative;
-  width: fit-content;*/
-  border: 1px solid LightPink;
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
@@ -102,7 +98,6 @@
 }
 
 .chip__dropdown {
-  background: LightPink;
   box-sizing: border-box;
   display: block;
   position: absolute;
