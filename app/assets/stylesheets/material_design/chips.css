@@ -83,7 +83,7 @@
   vertical-align: middle;
 }
 
-.hidden {
+.dropdown--hidden {
   display: none !important;
 }
 

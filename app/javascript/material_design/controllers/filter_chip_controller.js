@@ -24,7 +24,7 @@ export default class extends Controller {
       leaveActive: "transition ease-in duration-75",
       leaveFrom: "transform opacity-100 scale-100",
       leaveTo: "transform opacity-0 scale-95",
-      hiddenClass: "hidden",
+      hiddenClass: "dropdown--hidden",
       transitioned: false,
     });
 
@@ -63,13 +63,13 @@ export default class extends Controller {
 
   setSelected() {
     if (this.selectedValue) {
-      this.selectedIconTarget.classList.remove("hidden");
-      this.leadingIconTarget.classList.add("hidden");
+      this.selectedIconTarget.classList.remove("dropdown--hidden");
+      this.leadingIconTarget.classList.add("dropdown--hidden");
     }
   }
 
   toggleSelected() {
-    this.selectedIconTarget.classList.toggle("hidden");
-    this.leadingIconTarget.classList.toggle("hidden");
+    this.selectedIconTarget.classList.toggle("dropdown--hidden");
+    this.leadingIconTarget.classList.toggle("dropdown--hidden");
   }
 }
