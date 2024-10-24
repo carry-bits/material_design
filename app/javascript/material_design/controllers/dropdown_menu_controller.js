@@ -2,22 +2,12 @@ import { Controller } from "@hotwired/stimulus";
 import { useClickOutside, useTransition } from "stimulus-use";
 
 export default class extends Controller {
-  static targets = [
-    "chevronIcon",
-    "chip",
-    "dropdown",
-    "label",
-    "leadingIcon",
-    "selectedIcon",
-    "trailingIcon",
-  ];
-  static values = { open: Boolean, selected: Boolean };
+  static targets = ["menu"];
+  static values = { open: Boolean };
 
   connect() {
-    this.setSelected();
-
     useTransition(this, {
-      element: this.dropdownTarget,
+      element: this.menuTarget,
       enterActive: "transition ease-out duration-100",
       enterFrom: "transform opacity-0 scale-95",
       enterTo: "transform opacity-100 scale-100",
@@ -29,7 +19,6 @@ export default class extends Controller {
     });
 
     useClickOutside(this);
-
     if (this.openValue) {
       this.openDropdown();
     } else {
@@ -42,7 +31,7 @@ export default class extends Controller {
   }
 
   toggleDropdown() {
-    if (this.dropdownTarget.classList.contains("hidden")) {
+    if (this.menuTarget.classList.contains("hidden")) {
       this.openDropdown();
     } else {
       this.closeDropdown();
@@ -50,26 +39,12 @@ export default class extends Controller {
   }
 
   openDropdown() {
-    this.enter();
-    this.chevronIconTarget.classList.add("rotate-180");
-    // this.chipTarget.classList.add("selected");
+    this.menuTarget.classList.remove("hidden");
+    this.menuTarget.classList.add("show");
   }
-
+  
   closeDropdown() {
-    this.leave();
-    this.chevronIconTarget.classList.remove("rotate-180");
-    // this.chipTarget.classList.remove("selected");
-  }
-
-  setSelected() {
-    if (this.selectedValue) {
-      this.selectedIconTarget.classList.remove("hidden");
-      this.leadingIconTarget.classList.add("hidden");
-    }
-  }
-
-  toggleSelected() {
-    this.selectedIconTarget.classList.toggle("hidden");
-    this.leadingIconTarget.classList.toggle("hidden");
+    this.menuTarget.classList.remove("show");
+    this.menuTarget.classList.add("hidden");
   }
 }
