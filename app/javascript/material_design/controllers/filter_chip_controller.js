@@ -42,7 +42,7 @@ export default class extends Controller {
   }
 
   toggleDropdown() {
-    if (this.dropdownTarget.classList.contains("hidden")) {
+    if (this.dropdownTarget.classList.contains("dropdown--hidden")) {
       this.openDropdown();
     } else {
       this.closeDropdown();
