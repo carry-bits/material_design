@@ -99,9 +99,7 @@
 
 @media (min-width: 768px) {
   .chip__dropdown {
-    max-width: calc(
-      100vw - 140px
-    ); /* Reduzindo um pouco mais em telas médias */
+    max-width: calc(100vw - 140px);
   }
 }
 
