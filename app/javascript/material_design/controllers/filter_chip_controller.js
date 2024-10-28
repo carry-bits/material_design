@@ -24,7 +24,7 @@ export default class extends Controller {
       leaveActive: "transition ease-in duration-75",
       leaveFrom: "transform opacity-100 scale-100",
       leaveTo: "transform opacity-0 scale-95",
-      hiddenClass: "hidden",
+      hiddenClass: "dropdown--hidden",
       transitioned: false,
     });
 
@@ -42,7 +42,7 @@ export default class extends Controller {
   }
 
   toggleDropdown() {
-    if (this.dropdownTarget.classList.contains("hidden")) {
+    if (this.dropdownTarget.classList.contains("dropdown--hidden")) {
       this.openDropdown();
     } else {
       this.closeDropdown();
@@ -52,24 +52,22 @@ export default class extends Controller {
   openDropdown() {
     this.enter();
     this.chevronIconTarget.classList.add("rotate-180");
-    // this.chipTarget.classList.add("selected");
   }
 
   closeDropdown() {
     this.leave();
     this.chevronIconTarget.classList.remove("rotate-180");
-    // this.chipTarget.classList.remove("selected");
   }
 
   setSelected() {
     if (this.selectedValue) {
-      this.selectedIconTarget.classList.remove("hidden");
-      this.leadingIconTarget.classList.add("hidden");
+      this.selectedIconTarget.classList.remove("dropdown--hidden");
+      this.leadingIconTarget.classList.add("dropdown--hidden");
     }
   }
 
   toggleSelected() {
-    this.selectedIconTarget.classList.toggle("hidden");
-    this.leadingIconTarget.classList.toggle("hidden");
+    this.selectedIconTarget.classList.toggle("dropdown--hidden");
+    this.leadingIconTarget.classList.toggle("dropdown--hidden");
   }
 }

@@ -1,11 +1,11 @@
 module MaterialDesign
   module ChipHelper
-    def md_filter_chip(label=nil, leading_icon: nil, trailing_icon: nil, selected: false, data: {}, &block)
+    def md_filter_chip(label=nil, leading_icon: nil, trailing_icon: nil, selected: false, data: {}, style: nil, &block)
       merged_data = data.merge(controller: "filter-chip", filter_chip_selected_value: selected, action: "#{block_given? ? "click->filter-chip#toggleDropdown" : "click->filter-chip#toggleSelect"}")
 
       chip_content = content_tag(:div, class: "chip__container", data: merged_data) do
-        concat(content_tag(:div, class: class_names("chip", selected: selected), data: { filter_chip_target: "chip"}) do
-          concat(content_tag(:span, class: "hidden", data: {filter_chip_target: "selectedIcon"}) do
+        concat(content_tag(:div, class: class_names("chip", selected: selected), data: { filter_chip_target: "chip"}, style: style) do
+          concat(content_tag(:span, class: "dropdown--hidden", data: {filter_chip_target: "selectedIcon"}) do
             render("material_design/icons/icon", locals: { icon: "check", size: 18 })
           end)
           concat(content_tag(:span, data: {filter_chip_target: "leadingIcon"}) do
@@ -20,7 +20,7 @@ module MaterialDesign
           end)
         end)
         if block_given?
-          concat(content_tag(:div,  class: "hidden chip__dropdown", data: {filter_chip_target: "dropdown"}) do
+          concat(content_tag(:div,  class: "dropdown--hidden chip__dropdown", data: {filter_chip_target: "dropdown"}) do
             capture(&block)
           end)
         end
