@@ -3,12 +3,12 @@ module MaterialDesign
     def md_menu(menu_options: [], data: {}, form: nil, attribute: nil)
       content_tag(:div, class: "menu", data: data) do
         menu_options.each do |option|
-          concat(dropdown_menu_option(option, form, attribute))
+          concat(menu_option(option, form, attribute))
         end
       end
     end
 
-    def dropdown_menu_option(option, form, attribute)
+    def menu_option(option, form, attribute)
       if option[:path]
         link_to option[:path], data: option[:data], method: option[:method] do
           content_tag(:div, class: class_names("menu__item", divider: option[:divider])) do
