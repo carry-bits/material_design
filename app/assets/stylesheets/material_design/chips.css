@@ -32,6 +32,27 @@
 }
 
 .chip {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+
+  @media (prefers-color-scheme: light) {
+    background: rgb(var(--md-sys-light-secondary-fixed));
+    color: rgb(var(--md-sys-dark-on-secondary-fixed));
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background: rgb(var(--md-sys-dark-secondary-fixed));
+    color: rgb(var(--md-sys-dark-on-secondary-fixed));
+  }
+}
+
+.filter-chip {
   align-items: center;
   border-radius: 8px;
   cursor: pointer;
@@ -50,13 +71,13 @@
   }
 }
 
-.chip:hover {
+.filter-chip:hover {
   background: var(--md-sys-hover-layer-state)
     radial-gradient(circle, transparent 1%, var(--md-sys-hover-layer-state) 1%)
     center/15000%;
 }
 
-.chip.selected {
+.filter-chip.selected {
   border-color: transparent;
   @media (prefers-color-scheme: light) {
     background: rgb(var(--md-sys-light-secondary-container));
@@ -69,7 +90,7 @@
   }
 }
 
-.chip.selected:hover {
+.filter-chip.selected:hover {
   background: var(--md-sys-hover-selected-state)
     radial-gradient(
       circle,
@@ -79,7 +100,7 @@
     center/15000%;
 }
 
-.chip__container {
+.filter-chip__container {
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
@@ -87,7 +108,7 @@
   vertical-align: middle;
 }
 
-.chip__dropdown {
+.filter-chip__dropdown {
   box-sizing: border-box;
   display: block;
   max-width: calc(100vw - 60px);
@@ -98,12 +119,12 @@
 }
 
 @media (min-width: 768px) {
-  .chip__dropdown {
+  .filter-chip__dropdown {
     max-width: calc(100vw - 140px);
   }
 }
 
-.chip__label {
+.filter-chip__label {
   font-size: 14px;
   font-weight: 500;
   padding: 0px 8px;
