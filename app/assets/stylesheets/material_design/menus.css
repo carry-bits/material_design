@@ -1,56 +1,57 @@
-.dropdown-menu {
+.menu {
   position: absolute; 
   min-width: 200px;
   max-width: max-content;
   border-radius: 0.5rem;
   z-index: 20;
-  box-shadow: 0 2px 10px rgba(0, 2, 6, 0.3), 0 2px 10px rgba(0, 1, 2, 0.2);
+  box-shadow: 0 2px 10px rgb(0, 2, 6, 0.3), 0 2px 10px rgb(0, 1, 2, 0.2);
 
   @media (prefers-color-scheme: light) {
-    background: rgba(var(--md-sys-light-surface-container));
+    background: rgb(var(--md-sys-light-surface-container));
   }
 
   @media (prefers-color-scheme: dark) {
-    background: rgba(var(--md-sys-dark-surface-container));
+    background: rgb(var(--md-sys-dark-surface-container));
   }
-}
-
-.dropdown-item {
-  width: 100%;
-  display: flex;
-  gap: 0.75rem;
-  padding: 0.75rem 1rem;
-  cursor: pointer;
-}
-
-.dropdown-item:hover {
-  @media (prefers-color-scheme: light) {
-    background: rgba(var(--md-sys-light-on-surface), 0.08);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    background: rgba(var(--md-sys-dark-on-surface), 0.08);
-  }
-}
-
-.dropdown-item:active {
-  @media (prefers-color-scheme: light) {
-    background: rgba(var(--md-sys-light-surface-container-highest));
-  }
-
-  @media (prefers-color-scheme: dark) {
-    background: rgba(var(--md-sys-dark-surface-container-highest));
-  }
-}
-
-.dropdown-item.divider {
-  border-bottom: 1px solid;
   
-  @media (prefers-color-scheme: light) {
-    background: rgba(var(--md-sys-light-surface-variant));
-  }
-
-  @media (prefers-color-scheme: dark) {
-    background: rgba(var(--md-sys-dark-surface-variant));
+  .menu__item {
+    width: 100%;
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    
+    &.divider {
+      border-bottom: 1px solid;
+      
+      @media (prefers-color-scheme: light) {
+        background: rgb(var(--md-sys-light-surface-variant));
+      }
+      
+      @media (prefers-color-scheme: dark) {
+        background: rgb(var(--md-sys-dark-surface-variant));
+      }
+    }
+    
+    &:hover {
+      @media (prefers-color-scheme: light) {
+        background: rgb(var(--md-sys-light-on-surface) / 0.08);
+      }
+      
+      @media (prefers-color-scheme: dark) {
+        background: rgb(var(--md-sys-dark-on-surface) / 0.08);
+      }
+    }
+    
+    &:active {
+      @media (prefers-color-scheme: light) {
+        background: rgb(var(--md-sys-light-surface-container-highest));
+      }
+      
+      @media (prefers-color-scheme: dark) {
+        background: rgb(var(--md-sys-dark-surface-container-highest));
+      }
+    }
+    
   }
 }
