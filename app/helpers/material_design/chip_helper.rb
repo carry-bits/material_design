@@ -1,7 +1,7 @@
 module MaterialDesign
   module ChipHelper
     def md_filter_chip(label=nil, leading_icon: nil, trailing_icon: nil, selected: false, data: {}, style: nil, &block)
-      merged_data = data.merge(controller: "chip", filter_chip_selected_value: selected, action: "#{block_given? ? "click->chip#toggleDropdown" : "click->chip#toggleSelect"}")
+      merged_data = data.merge(controller: "filter-chip", filter_chip_selected_value: selected, action: "#{block_given? ? "click->filter-chip#toggleDropdown" : "click->filter-chip#toggleSelect"}")
 
       chip_content = content_tag(:div, class: "chip__container", data: merged_data) do
         concat(content_tag(:div, class: class_names("chip", selected: selected), data: { filter_chip_target: "chip"}, style: style) do
