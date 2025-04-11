@@ -3,7 +3,7 @@ require_relative "lib/material_design/version"
 Gem::Specification.new do |spec|
   spec.name        = "material_design"
   spec.version     = MaterialDesign::VERSION
-  spec.authors     = ["Eduardo Yutaka Nakanishi", "Fabiana Ramos", "Mariana Negrão Trancoso"]
+  spec.authors     = ["Eduardo Yutaka Nakanishi", "Fabiana Ramos", "Mariana Negrão Trancoso", "Prscila Sabino", "Bianca Cristina Ramos"]
   spec.email       = ["eduardo.nakanishi@gmail.com"]
   spec.homepage    = "https://rubygems.org/gems/material_design"
   spec.summary     = "Material Design"
@@ -23,4 +23,7 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_runtime_dependency "rails", ">= 7.1.3"
+
+  spec.add_dependency "importmap-rails"
+  spec.add_dependency "stimulus-rails"
 end
