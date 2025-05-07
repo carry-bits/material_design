@@ -5,7 +5,33 @@
   border-radius: 0.5rem;
   z-index: 20;
   box-shadow: 0 2px 10px rgb(0, 2, 6, 0.3), 0 2px 10px rgb(0, 1, 2, 0.2);
+  overflow-y: auto;
+  max-height: 200px;
 
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  @media (prefers-color-scheme: light) {
+    background: #949494;
+  }
+  @media (prefers-color-scheme: dark) {
+    background: #a9a9a9;
+  }
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    border-radius: 0.5rem;
+    @media (prefers-color-scheme: light) {
+      background: #666666;
+    }
+    @media (prefers-color-scheme: dark) {
+      background: #d3d3d3;
+    }
+    }
+    
   @media (prefers-color-scheme: light) {
     background: rgb(var(--md-sys-light-surface-container));
   }
